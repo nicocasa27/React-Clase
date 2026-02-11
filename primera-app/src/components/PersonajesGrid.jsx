@@ -1,5 +1,6 @@
 import React from 'react'
 import Spinner from './Spinner'
+import  PersonajesItems  from './PersonajesItems'
 
 export const PersonajesGrid = ({ items, isLoading }) => {
   return isLoading ? (
@@ -7,8 +8,8 @@ export const PersonajesGrid = ({ items, isLoading }) => {
   ) : (
 
  <section className='cards'>
-    {items.map((items) =>(
-        <PersonajesItem key={items.key} item={items} />
+    {items.map((item) =>(
+        <PersonajesItems key={item.key} item={item} />
     ))}
     </section>
   )

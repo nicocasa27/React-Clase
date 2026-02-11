@@ -15,7 +15,7 @@ const App = () => {
     const resultado = await axios.get('./personajes.json')
     console.log(resultado.data)
     setItems(resultado.data)
-
+    setIsLoading(false)
 
 
   }
