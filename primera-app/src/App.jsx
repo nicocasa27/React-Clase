@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Header from './components/Header'
+import  PersonajesGrid from './components/PersonajesGrid'
+
 
 const App = () => {
 
@@ -26,6 +28,7 @@ const App = () => {
   return (
     <div className='container' >
     <Header />
+    <PersonajesGrid isLoading={isLoading} items={items} />
     </div>
   )
 }
