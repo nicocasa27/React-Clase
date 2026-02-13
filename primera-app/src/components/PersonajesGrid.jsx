@@ -16,3 +16,5 @@ export const PersonajesGrid = ({ items, isLoading }) => {
 }
 
 export default PersonajesGrid
+
+//hola
