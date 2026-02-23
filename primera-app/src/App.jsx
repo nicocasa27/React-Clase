@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
 import Header from './components/Header'
 import  PersonajesGrid from './components/PersonajesGrid'
 
@@ -12,10 +11,14 @@ const App = () => {
  useEffect(() => {
 
   const fetchItems = async () => {
-    const resultado = await axios.get('./personajes.json')
-    console.log(resultado.data)
-    setItems(resultado.data)
-    setIsLoading(false)
+    try {
+      const res = await fetch('/personajes.json')
+      const data = await res.json()
+      console.log(data)
+      setItems(data)
+    } finally {
+      setIsLoading(false)
+    }
 
 
   }
